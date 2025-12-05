@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICU Smart Control System - لوحة التحكم</title>
+    <meta name="description" content="نظام تحكم ومتابعة ذكي للعناية المركزة">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">⚕️</div>
+                <div class="logo-text">
+                    <h1>ICU Control</h1>
+                    <p>Smart Monitoring</p>
+                </div>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">
+                            <span class="nav-icon">📊</span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">👥</span>
+                            <span>All Patients</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">💊</span>
+                            <span>Medications</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">🔔</span>
+                            <span>Alerts</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">👨‍⚕️</span>
+                            <span>Staff</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">📈</span>
+                            <span>Reports</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">⚙️</span>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-title">
+                    <h2>ICU Control Room</h2>
+                    <p class="header-subtitle">Real-time patient monitoring • <span id="current-time"></span></p>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-value" id="total-patients">12</span>
+                        <span class="stat-label">Total Patients</span>
+                    </div>
+                    <div class="stat-item stable">
+                        <span class="stat-value" id="stable-count">8</span>
+                        <span class="stat-label">Stable</span>
+                    </div>
+                    <div class="stat-item warning">
+                        <span class="stat-value" id="warning-count">3</span>
+                        <span class="stat-label">Warning</span>
+                    </div>
+                    <div class="stat-item critical">
+                        <span class="stat-value" id="critical-count">1</span>
+                        <span class="stat-label">Critical</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Patients Grid -->
+            <div class="patients-grid" id="patients-grid">
+                <!-- Patient cards will be dynamically generated -->
+            </div>
+        </main>
+
+        <!-- Alerts Panel -->
+        <div class="alerts-panel" id="alerts-panel">
+            <!-- Alerts will be dynamically generated -->
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
